@@ -1,0 +1,46 @@
+<html>
+<head>
+    <link rel="stylesheet" href="http://js.arcgis.com/3.10/js/esri/css/esri.css">
+    <style>
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #FFF;
+            overflow: hidden;
+            font-family: "Trebuchet MS";
+        }
+    </style>
+    <script type="text/javascript">
+        var jsPath = location.pathname.replace(/[^\/]+$/, '');
+        window.djConfig = {
+            parseOnLoad: false,
+            async: true,
+            packages: [
+                {
+                    name: "App",
+                    location: jsPath + "/js/App"
+                }
+            ]
+        }
+    </script>
+
+    <script type="text/javascript" src="http://js.arcgis.com/3.10/"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    require(["dojo/domReady!", "App/OAuth/PortalSecurity/SecureLoader"], function (domReady, SecureLoader) {
+        new SecureLoader();
+    });
+</script>
+<div id="map">
+
+</div>
+</body>
+</html>

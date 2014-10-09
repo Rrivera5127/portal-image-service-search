@@ -1,0 +1,6 @@
+{
+    "requireOAuthLogin": true,
+    "appId": "",
+    "portalUrl": "http://www.arcgis.com",
+    "loginErrorForward": "http://www.esri.com"
+}
